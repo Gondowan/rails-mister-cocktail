@@ -6,7 +6,7 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-md-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= <%= cl_image_path cocktail.photo, width: 200, height: 150, crop: :fill unless cocktail.photo.blank? %>);">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path cocktail.photo, width: 200, height: 150, crop: :fill unless cocktail.photo.blank? %>);">
         <div class="card-title">
           <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
           <p><%= link_to "Delete", cocktail_path(cocktail), method: :delete, data: { confirm: "You sure?" } %></p>
